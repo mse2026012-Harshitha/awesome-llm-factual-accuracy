@@ -314,3 +314,18 @@ awesome-llm-factual-accuracy/
 │   └── github-repositories.md
 │
 └── LICENSE
+```
+
+## Conclusion
+
+Reliable scientific use of Large Language Models requires more than measuring whether a model selects the correct answer. Scientific evaluation must consider factual correctness, evidence grounding, reasoning validity, citation faithfulness, uncertainty, and the changing nature of scientific knowledge.
+
+Existing benchmarks provide valuable but complementary capabilities. A future cross-domain benchmark should combine expert-authored questions, multiple evaluation formats, evidence retrieval, claim verification, citation checking, calibration, abstention, and temporal evaluation.
+
+The overall goal of this repository is to provide a structured collection of research and technical resources for understanding and developing **trustworthy evaluation methods for LLMs in scientific domains**.
+
+## License
+
+This repository's original organization, documentation, and other original contributions are provided under the **MIT License**, unless otherwise stated.
+
+Research papers, datasets, software, and other third-party materials remain subject to their respective licenses and copyright terms. Users should follow the original license and attribution requirements of each external resource.
