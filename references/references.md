@@ -1,4 +1,4 @@
-#References
+# References
 
 1) Auer, S., Barone, D. A. C., Bartz, C., Cortes, E. G., Jaradeh, M. Y., Karras, O., Koubarakis, M., Mouromtsev, D., Pliukhin, D., Radyush, D., Shilin, I., Stocker, M., & Tsalapati, E. (2023).The SciQA Scientific Question Answering Benchmark for Scholarly Knowledge. Scientific Reports, 13, 7240. DOI: 10.1038/s41598-023-33607-z. 1.
 
