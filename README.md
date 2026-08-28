@@ -52,7 +52,7 @@ The paper argues for a domain-stratified and evidence-centered evaluation framew
 
 ### Paper
 
-**[View AI-Assisted Research Paper](paper/AI_Assisted_Research_Paper.pdf)**
+**[View AI-Assisted Research Paper](Paper/AI_Assisted_Research_Paper.pdf)**
 
 The complete research paper is included in this repository.
 
@@ -139,7 +139,7 @@ This section contains software tools and libraries that can support LLM evaluati
 
 Detailed descriptions and official project links are available here:
 
-**[View Tools and Libraries](tools/tools.md)**
+**[View Tools and Libraries](Tools/Tools.md)**
 
 The collection includes at least:
 
