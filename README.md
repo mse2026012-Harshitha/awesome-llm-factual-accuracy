@@ -1,6 +1,6 @@
 # Benchmarking Factual Accuracy of Large Language Models Across Scientific Domains
 
-A curated research repository focused on evaluating the factual accuracy, evidence grounding, reasoning, citation faithfulness, and uncertainty calibration of Large Language Models (LLMs) across scientific domains. It brings together research papers, benchmarks, datasets, tools, GitHub implementations, and learning resources relevant to trustworthy scientific AI.
+A curated research repository focused on evaluating the factual accuracy, evidence grounding, reasoning, citation faithfulness, and uncertainty calibration of Large Language Models (LLMs) across scientific domains. It brings together verified research papers, benchmarks, datasets, tools, GitHub implementations, and learning resources relevant to trustworthy scientific AI.
 
 This repository accompanies an AI-assisted research paper that examines existing scientific evaluation benchmarks and proposes a multidimensional, domain-stratified framework for assessing the reliability of LLMs in scientific information tasks.
 
@@ -8,18 +8,19 @@ This repository accompanies an AI-assisted research paper that examines existing
 
 ## Table of Contents
 
-* [Topic Overview](#topic-overview)
-* [AI-Assisted Research Paper](#ai-assisted-research-paper)
-* [Citation Integrity Audit](#citation-integrity-audit)
-* [Curated Research Papers](#curated-research-papers)
-* [Datasets](#datasets)
-* [Tools and Libraries](#tools-and-libraries)
-* [GitHub Implementations](#github-implementations)
-* [Tutorials and Learning Resources](#tutorials-and-learning-resources)
-* [Key Research Challenges](#key-research-challenges)
-* [Proposed Benchmarking Framework](#proposed-benchmarking-framework)
-* [Repository Structure](#repository-structure)
-* [License](#license)
+- [Topic Overview](#topic-overview)
+- [AI-Assisted Research Paper](#ai-assisted-research-paper)
+- [Citation Integrity Audit](#citation-integrity-audit)
+- [Curated Research Papers](#curated-research-papers)
+- [Datasets](#datasets)
+- [Tools and Libraries](#tools-and-libraries)
+- [GitHub Implementations](#github-implementations)
+- [Tutorials and Learning Resources](#tutorials-and-learning-resources)
+- [Key Research Challenges](#key-research-challenges)
+- [Proposed Benchmarking Framework](#proposed-benchmarking-framework)
+- [Scientific Reliability Dimensions](#scientific-reliability-dimensions)
+- [Repository Structure](#repository-structure)
+- [License](#license)
 
 ---
 
@@ -29,7 +30,7 @@ Large Language Models (LLMs) are increasingly used for scientific question answe
 
 Scientific factuality is particularly challenging because scientific knowledge is specialized, evidence-dependent, quantitative, uncertain, and continuously changing. A reliable evaluation system therefore needs to examine more than conventional question-answering accuracy. It should consider whether individual claims are factually correct, whether reasoning is valid, whether retrieved or cited evidence actually supports the claims, and whether the model appropriately communicates uncertainty.
 
-Existing resources address different parts of this problem. MMLU and ARC evaluate broad knowledge and reasoning, while GPQA focuses on difficult graduate-level scientific questions. PubMedQA and BioASQ address biomedical question answering, and SciFact and SciFact-Open evaluate scientific claim verification and evidence retrieval. Other approaches such as FActScore, SelfCheckGPT, Retrieval-Augmented Generation (RAG), Chain-of-Verification, and ARES address factuality measurement, hallucination detection, verification, and automated evaluation.
+Existing resources address different parts of this problem. MMLU and ARC evaluate broad knowledge and reasoning, while GPQA focuses on difficult graduate-level scientific questions. PubMedQA and BioASQ address biomedical question answering, and SciFact evaluates scientific claim verification and evidence retrieval. Other approaches such as FActScore, SelfCheckGPT, Retrieval-Augmented Generation (RAG), Chain-of-Verification, and ARES address factuality measurement, hallucination detection, verification, and automated evaluation.
 
 The central direction of this repository is therefore **multidimensional scientific reliability evaluation**. A strong benchmark should combine domain-balanced expert questions, open-ended generation, claim verification, evidence retrieval, citation verification, calibration, abstention, and temporal robustness rather than relying on a single accuracy score.
 
@@ -51,7 +52,7 @@ The paper argues for a domain-stratified and evidence-centered evaluation framew
 
 ### Paper
 
-**[AI_Assisted_Research_Paper.pdf](./AI_Assisted_Research_Paper.pdf)**
+**[View AI-Assisted Research Paper](paper/AI_Assisted_Research_Paper.pdf)**
 
 The complete research paper is included in this repository.
 
@@ -61,198 +62,136 @@ The complete research paper is included in this repository.
 
 The references and major claims in the AI-assisted research paper were examined as part of a citation integrity audit. The audit focuses on checking whether cited scholarly publications exist and whether their bibliographic information and cited claims are appropriately supported.
 
-The audit also considers important metadata such as:
+The audit considers important metadata such as:
 
-* Publication title
-* Authors
-* Publication year
-* Journal or conference
-* DOI or other persistent identifier
-* Relationship between the cited source and the associated claim
+- Publication title
+- Authors
+- Publication year
+- Journal or conference
+- DOI or other persistent identifier
+- Relationship between the cited source and the associated claim
 
 ### Audit
 
-**[Citation Integrity Audit](./Citation_Integrity_Audit.md)**
-
-> If the audit is stored under a different filename in this repository, update the link above to match the actual filename.
+**[View Citation Integrity Audit](citation-audit/Citation_Integrity_Audit.pdf)**
 
 ---
 
 ## Curated Research Papers
 
-The following research papers are particularly relevant to LLM factuality, scientific question answering, hallucination detection, evidence verification, and evaluation.
+The repository contains a curated collection of verified scholarly papers relevant to LLM factuality, scientific question answering, hallucination detection, evidence verification, and evaluation.
 
-### 1. General LLM Knowledge and Reasoning
+The papers are organized into meaningful research categories:
 
-* **MMLU — Measuring Massive Multitask Language Understanding**
-  Evaluates knowledge and reasoning across a broad range of subjects, including STEM and professional domains.
+### 1. Survey and Review Papers
 
-* **ARC — AI2 Reasoning Challenge**
-  Focuses on scientific reasoning through grade-school science questions.
+Research surveys and reviews covering LLM evaluation, factuality, hallucination, scientific question answering, and trustworthy AI.
 
-* **GPQA — A Graduate-Level Google-Proof Q&A Benchmark**
-  Evaluates difficult graduate-level questions in biology, physics, and chemistry.
+### 2. Foundational Papers
 
-### 2. Biomedical and Scientific Question Answering
+Important foundational research introducing major datasets, benchmarks, evaluation methods, and approaches relevant to LLM factuality.
 
-* **PubMedQA — A Dataset for Biomedical Research Question Answering**
-  Evaluates reasoning over biomedical research abstracts.
+### 3. Recent Research Papers
 
-* **BioASQ**
-  Provides large-scale biomedical semantic indexing and question-answering challenges.
+Recent research addressing factual accuracy, hallucination detection, scientific reasoning, evidence grounding, and LLM evaluation.
 
-* **SciQA — Scientific Question Answering Benchmark for Scholarly Knowledge**
-  Focuses on answering scientific questions using scholarly knowledge.
+### 4. Scientific Question Answering
 
-### 3. Scientific Claim Verification
+Research focused on evaluating language models on scientific and biomedical question-answering tasks.
 
-* **SciFact — Fact or Fiction: Verifying Scientific Claims**
-  Evaluates whether scientific claims are supported or refuted by research evidence.
+### 5. Claim Verification and Evidence Retrieval
 
-* **SciFact-Open — Towards Open-Domain Scientific Claim Verification**
-  Extends scientific claim verification to a substantially larger research corpus.
+Research on verifying scientific claims and determining whether evidence supports generated statements.
 
-### 4. Factuality and Hallucination
+### 6. Factuality and Hallucination Evaluation
 
-* **TruthfulQA**
-  Tests whether language models reproduce common human misconceptions and falsehoods.
+Research on measuring factual accuracy, detecting hallucinations, and evaluating the reliability of generated text.
 
-* **FActScore**
-  Measures factual precision in long-form generated text by evaluating atomic claims.
+### Complete Paper Collection
 
-* **SelfCheckGPT**
-  Uses consistency between multiple generated responses as a signal for possible hallucination.
+**[View the Verified Research Papers](references/references.md)**
 
-* **HaluEval**
-  Provides a large-scale benchmark for hallucination recognition.
-
-### 5. Retrieval, Verification, and Automated Evaluation
-
-* **Retrieval-Augmented Generation (RAG)**
-  Combines language models with external retrieval to improve knowledge-intensive generation.
-
-* **Chain-of-Verification (CoVe)**
-  Uses verification questions and independent checking to reduce hallucinations.
-
-* **ARES**
-  Provides automated evaluation of retrieval-augmented generation systems through context relevance, answer faithfulness, and answer relevance.
-
-The research paper discusses these resources and their respective strengths and limitations.
+The collection contains at least 20 verified scholarly papers, with bibliographic information, links, and brief explanations of their relevance.
 
 ---
 
 ## Datasets
 
-| Dataset / Benchmark | Domain                      | Description                                       | Main Use                                       | Source                                              |
-| ------------------- | --------------------------- | ------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------- |
-| **MMLU**            | General / STEM              | Multitask knowledge and reasoning benchmark       | Knowledge and reasoning evaluation             | [MMLU](https://github.com/hendrycks/test)           |
-| **ARC**             | Science                     | Grade-school science questions                    | Scientific reasoning                           | [ARC](https://allenai.org/data/arc)                 |
-| **GPQA**            | Biology, Chemistry, Physics | Graduate-level expert questions                   | Advanced scientific reasoning                  | [GPQA](https://github.com/idavidrein/gpqa)          |
-| **PubMedQA**        | Biomedical                  | Questions derived from PubMed research abstracts  | Biomedical QA                                  | [PubMedQA](https://github.com/pubmedqa/pubmedqa)    |
-| **BioASQ**          | Biomedical                  | Biomedical semantic indexing and QA               | Biomedical information retrieval and QA        | [BioASQ](https://bioasq.org/)                       |
-| **SciFact**         | Scientific literature       | Scientific claims paired with evidence            | Claim verification                             | [SciFact](https://github.com/allenai/scifact)       |
-| **SciFact-Open**    | Scientific literature       | Large open-domain scientific evidence corpus      | Scientific evidence retrieval and verification | [SciFact-Open](https://github.com/allenai/scifact)  |
-| **TruthfulQA**      | General knowledge           | Questions designed around common misconceptions   | Truthfulness evaluation                        | [TruthfulQA](https://github.com/sylinrl/TruthfulQA) |
-| **HaluEval**        | Multiple tasks              | Human- and model-generated hallucination examples | Hallucination detection                        | [HaluEval](https://github.com/RUCAIBox/HaluEval)    |
+This repository contains datasets and benchmarks relevant to evaluating scientific knowledge, factual accuracy, claim verification, and scientific question answering.
 
-A major motivation for combining these resources is that existing benchmarks evaluate different dimensions of scientific reliability rather than providing one complete cross-domain evaluation.
+The detailed dataset descriptions, sources, applications, and links are available here:
+
+**[View Datasets](datasets/datasets.md)**
+
+The collection includes at least:
+
+- 3 relevant datasets/benchmarks
+- Dataset source
+- Description
+- Application
+- Official dataset/project link
 
 ---
 
 ## Tools and Libraries
 
-### Evaluation and Factuality
+This section contains software tools and libraries that can support LLM evaluation, factuality measurement, hallucination detection, evidence grounding, and research experimentation.
 
-* **FActScore** — Fine-grained evaluation of factual precision in long-form text.
-* **SelfCheckGPT** — Black-box hallucination detection using consistency across sampled responses.
-* **ARES** — Automated evaluation framework for Retrieval-Augmented Generation systems.
-* **HaluEval** — Resources for evaluating hallucination recognition.
+Detailed descriptions and official project links are available here:
 
-### Retrieval and Knowledge Grounding
+**[View Tools and Libraries](tools/tools.md)**
 
-* **Retrieval-Augmented Generation (RAG)** — Enables LLMs to retrieve external information before generating responses.
-* **Scientific literature retrieval systems** — Useful for connecting generated claims to scholarly evidence.
+The collection includes at least:
 
-### Research and Data Processing
-
-* Python
-* Jupyter Notebook
-* Hugging Face ecosystem
-* PyTorch
-* Natural Language Processing libraries
-
-These tools can support benchmark construction, retrieval, model evaluation, evidence analysis, and reproducible experiments.
+- 5 relevant tools or libraries
+- Purpose of each tool
+- Official/project link
 
 ---
 
 ## GitHub Implementations
 
-The following open-source implementations are useful starting points for experimenting with the benchmarks and evaluation approaches discussed in this repository.
+Open-source GitHub implementations are included to provide practical resources for reproducing benchmark experiments and studying factuality and scientific claim verification.
 
-### Benchmark Implementations
+Detailed descriptions and repository links are available here:
 
-* **MMLU**
-  https://github.com/hendrycks/test
+**[View GitHub Implementations](implementations/github-repositories.md)**
 
-* **GPQA**
-  https://github.com/idavidrein/gpqa
+The collection includes at least:
 
-* **PubMedQA**
-  https://github.com/pubmedqa/pubmedqa
-
-* **SciFact**
-  https://github.com/allenai/scifact
-
-* **TruthfulQA**
-  https://github.com/sylinrl/TruthfulQA
-
-* **HaluEval**
-  https://github.com/RUCAIBox/HaluEval
-
-### Factuality and Evaluation
-
-* **FActScore**
-  https://github.com/shmsw25/FActScore
-
-* **SelfCheckGPT**
-  https://github.com/potsawee/selfcheckgpt
-
-* **ARES**
-  https://github.com/stanford-futuredata/ARES
-
-These implementations can be used to reproduce benchmark experiments, investigate factuality failures, and develop evaluation pipelines.
+- 5 relevant GitHub repositories
+- What each implementation provides
+- Why each implementation is relevant
+- Repository link
 
 ---
 
 ## Tutorials and Learning Resources
 
-### Foundational Topics
+The following types of learning resources are useful for understanding the technical foundations of this research area:
 
-* Large Language Models
-* Natural Language Processing
-* Scientific Question Answering
-* Hallucination Detection
-* Information Retrieval
-* Retrieval-Augmented Generation
-* Scientific Claim Verification
-* LLM Evaluation
+- Large Language Models
+- Natural Language Processing
+- Scientific Question Answering
+- Hallucination Detection
+- Information Retrieval
+- Retrieval-Augmented Generation
+- Scientific Claim Verification
+- LLM Evaluation
 
 ### Recommended Learning Resources
 
-* **Hugging Face Documentation** — Models, datasets, transformers, and evaluation workflows.
-* **PyTorch Documentation** — Deep learning framework for implementing and evaluating models.
-* **Papers With Code** — Benchmark and implementation discovery.
-* **arXiv** — Access to current research papers in machine learning and related scientific fields.
-* **ACL Anthology** — Research literature from computational linguistics and NLP conferences.
-* **NeurIPS Proceedings** — Research on machine learning and artificial intelligence.
+- **Hugging Face Documentation** — Models, datasets, transformers, and machine learning workflows.
+- **PyTorch Documentation** — Deep learning framework for implementing and evaluating models.
+- **Papers With Code** — Research benchmarks and implementation discovery.
+- **arXiv** — Research papers in machine learning and related scientific fields.
+- **ACL Anthology** — Research literature in computational linguistics and natural language processing.
 
-These resources provide background knowledge and technical material for understanding and implementing scientific LLM evaluation methods.
+This repository provides at least five learning resources for understanding and implementing scientific LLM evaluation methods.
 
 ---
 
 ## Key Research Challenges
-
-The research paper identifies several major challenges that must be addressed when benchmarking scientific factual accuracy.
 
 ### 1. Benchmark Contamination
 
@@ -260,7 +199,7 @@ Public benchmark questions may appear in model training data, making high perfor
 
 ### 2. Domain Imbalance
 
-Existing evaluation resources provide stronger coverage for some areas, particularly medicine and general STEM education, while specialized areas may receive less systematic evaluation.
+Existing evaluation resources provide stronger coverage for some areas, particularly medicine and general STEM education, while specialized scientific areas may receive less systematic evaluation.
 
 ### 3. Temporal Knowledge Drift
 
@@ -282,8 +221,6 @@ Scientific evaluation often requires specialized expertise, but expert annotatio
 
 Automated evaluators can introduce bias, reproduce misconceptions, or favor fluent answers. Automated evaluation should therefore be calibrated against expert judgments.
 
-The paper specifically identifies benchmark contamination, domain imbalance, temporal drift, ambiguity, multiple-choice limitations, expert annotation, and citation/provenance errors as major limitations.
-
 ---
 
 ## Proposed Benchmarking Framework
@@ -302,11 +239,11 @@ Use multiple qualified experts to independently verify questions, answers, diffi
 
 Evaluate scientific concepts using multiple formats:
 
-* Multiple-choice questions
-* Short-answer questions
-* Open-ended explanations
-* Claim verification
-* Evidence retrieval
+- Multiple-choice questions
+- Short-answer questions
+- Open-ended explanations
+- Claim verification
+- Evidence retrieval
 
 ### Stage 4 — Evidence and Citation Assessment
 
@@ -324,15 +261,13 @@ Models should provide confidence estimates and receive credit for appropriately 
 
 Instead of reporting only one accuracy score, results should classify:
 
-* Factual errors
-* Reasoning errors
-* Citation errors
-* Evidence errors
-* Numerical errors
-* Temporal errors
-* Overconfidence
-
-This six-stage structure is directly based on the framework proposed in the research paper.
+- Factual errors
+- Reasoning errors
+- Citation errors
+- Evidence errors
+- Numerical errors
+- Temporal errors
+- Overconfidence
 
 ---
 
@@ -340,62 +275,42 @@ This six-stage structure is directly based on the framework proposed in the rese
 
 A central idea of the research is that scientific reliability should be evaluated across multiple dimensions:
 
-| Dimension       | Question                                                       |
-| --------------- | -------------------------------------------------------------- |
-| **Knowledge**   | Does the model know the relevant scientific information?       |
-| **Factuality**  | Are the individual claims correct?                             |
-| **Reasoning**   | Is the reasoning logically and scientifically valid?           |
-| **Evidence**    | Does the evidence actually support the claim?                  |
-| **Citation**    | Does the cited source accurately support the statement?        |
+| Dimension | Evaluation Question |
+|---|---|
+| **Knowledge** | Does the model know the relevant scientific information? |
+| **Factuality** | Are the individual claims correct? |
+| **Reasoning** | Is the reasoning logically and scientifically valid? |
+| **Evidence** | Does the evidence actually support the claim? |
+| **Citation** | Does the cited source accurately support the statement? |
 | **Calibration** | Does the model express appropriate confidence and uncertainty? |
 
-The paper argues that these dimensions should not simply be collapsed into one accuracy number.
+These dimensions should not simply be collapsed into one accuracy number.
 
 ---
 
 ## Repository Structure
 
 ```text
-.
+awesome-llm-factual-accuracy/
+│
 ├── README.md
-├── AI_Assisted_Research_Paper.pdf
-├── Citation_Integrity_Audit.md
-├── papers/
-│   ├── general_llm_evaluation/
-│   ├── scientific_qa/
-│   ├── biomedical/
-│   ├── claim_verification/
-│   └── hallucination_factuality/
+│
+├── paper/
+│   └── AI_Assisted_Research_Paper.pdf
+│
+├── citation-audit/
+│   └── Citation_Integrity_Audit.pdf
+│
+├── references/
+│   └── references.md
+│
 ├── datasets/
-│   └── dataset_links.md
+│   └── datasets.md
+│
 ├── tools/
-│   └── evaluation_tools.md
+│   └── tools.md
+│
 ├── implementations/
-│   └── github_resources.md
-└── resources/
-    └── tutorials_and_learning.md
-```
-
----
-
-## Conclusion
-
-Reliable scientific use of Large Language Models requires more than measuring whether a model selects the correct answer. Scientific evaluation must consider factual correctness, evidence grounding, reasoning validity, citation faithfulness, uncertainty, and the changing nature of scientific knowledge.
-
-Existing benchmarks provide valuable but complementary capabilities. A future cross-domain benchmark should combine expert-authored questions, multiple evaluation formats, evidence retrieval, claim verification, citation checking, calibration, abstention, and temporal evaluation.
-
-The overall goal of this repository is to provide a structured collection of research and technical resources for understanding and developing **trustworthy evaluation methods for LLMs in scientific domains**.
-
----
-
-## License
-
-This repository's original organization, documentation, and other original contributions are provided under the **MIT License**, unless otherwise stated.
-
-Research papers, datasets, software, and other third-party materials remain subject to their respective licenses and copyright terms. Users should follow the original license and attribution requirements of each external resource.
-
----
-
-## References
-
-The research paper includes the scholarly references supporting the discussion, including work on MMLU, ARC, GPQA, PubMedQA, SciFact, SciFact-Open, TruthfulQA, FActScore, SelfCheckGPT, HaluEval, RAG, Chain-of-Verification, ARES, and scientific factuality evaluation.
+│   └── github-repositories.md
+│
+└── LICENSE
