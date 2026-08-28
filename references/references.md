@@ -1,3 +1,6 @@
-1) [https://arxiv.org/abs/2310.00741]
-2) [https://deepmind.google/blog/facts-benchmark-suite-systematically-evaluating-the-factuality-of-large-language-models/]
-3) [https://aclanthology.org/2024.eacl-long.4.pdf]
+1) Auer, S., Barone, D. A. C., Bartz, C., Cortes, E. G., Jaradeh, M. Y., Karras, O., Koubarakis, M., Mouromtsev, D., Pliukhin, D., Radyush, D., Shilin, I., Stocker, M., & Tsalapati, E. (2023). The SciQA Scientific Question Answering Benchmark for Scholarly Knowledge. Scientific Reports, 13, 7240. DOI: 10.1038/s41598-023-33607-z.
+2)Clark, P., Cowhey, I., Etzioni, O., Khot, T., Sabharwal, A., Schoenick, C., & Tafjord, O. (2018). Think You Have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge. arXiv: 1803.05457.
+3) Dhuliawala, S., Komeili, M., Xu, J., Raileanu, R., Li, X., Celikyilmaz, A., & Weston, J. (2023). Chain-of-Verification Reduces Hallucination in Large Language Models. arXiv: 2309.11495.
+4) Hendrycks, D., Burns, C., Basart, S., Zou, A., Mazeika, M., Song, D., & Steinhardt, J. (2021). Measuring Massive Multitask Language Understanding. Proceedings of the International Conference on Learning Representations (ICLR). arXiv: 2009.03300.
+5) Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z., Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B., & Liu, T. (2025). A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions. ACM Transactions on Information Systems, 43(2), Article 42, 1–55. DOI: 10.1145/3703155; arXiv: 2311.05232.
+
